@@ -14,6 +14,16 @@
             "date": 1693891412083,
             "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\successes\\phu-2023-05-09-11-success.log",
             "hash": "537976f23260a7a2d54ce16ac211bd0c965152ecb762ba688b9c0b2e70a04dbd"
+        },
+        {
+            "date": 1693905552925,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\successes\\phu-2023-05-09-15-success.log",
+            "hash": "4fd590d4374f06d398147fa86d3e2cfb1d23fa17a5d072c3eb17535edc30ffaa"
+        },
+        {
+            "date": 1693909475201,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\successes\\phu-2023-05-09-16-success.log",
+            "hash": "2cadf558d259b462107e60531bd8868648554d5a1487b97209d6c0f3109bdb85"
         }
     ],
     "hashType": "sha256"
