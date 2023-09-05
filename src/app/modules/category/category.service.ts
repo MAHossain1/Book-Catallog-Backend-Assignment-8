@@ -11,6 +11,17 @@ const getCategoriesFromDB = async (): Promise<Partial<Category>[]> => {
   return result;
 };
 
+const getSingleCategory = async (
+  id: string
+): Promise<Partial<Category | null>> => {
+  const result = await prisma.category.findFirst({
+    where: {
+      id,
+    },
+  });
+  return result;
+};
+
 const updateCategoryDataToDB = async (
   id: string,
   payload: Partial<Category>
@@ -38,6 +49,7 @@ const deleteCategoryFromDB = async (
 export const CategoryService = {
   createCategory,
   getCategoriesFromDB,
+  getSingleCategory,
   updateCategoryDataToDB,
   deleteCategoryFromDB,
 };

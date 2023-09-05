@@ -34,6 +34,16 @@
             "date": 1693915427794,
             "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\errors\\phu-2023-05-09-18-error.log",
             "hash": "ffe26557fc36f302ed717d800b7f507c39c709ea2d99d7c07fceedada9cb16c3"
+        },
+        {
+            "date": 1693921973243,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\errors\\phu-2023-05-09-19-error.log",
+            "hash": "e1a833480f8765760fecc621eb3527987ba41bdfd2745574bc4427007ca57ba7"
+        },
+        {
+            "date": 1693922422092,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\errors\\phu-2023-05-09-20-error.log",
+            "hash": "ed162a91bed22ddbee6eb7c66d7ac195285cce97a59f0073a1bd827439fa5cb1"
         }
     ],
     "hashType": "sha256"

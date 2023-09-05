@@ -11,6 +11,15 @@ const getBooksFromDB = async (): Promise<Partial<Book>[]> => {
   return result;
 };
 
+const getSingleBook = async (id: string): Promise<Partial<Book | null>> => {
+  const result = await prisma.book.findFirst({
+    where: {
+      id,
+    },
+  });
+  return result;
+};
+
 const updateBookDataToDB = async (
   id: string,
   payload: Partial<Book>
@@ -36,6 +45,7 @@ const deleteBookFromDB = async (id: string): Promise<Partial<Book | null>> => {
 export const BookService = {
   createBook,
   getBooksFromDB,
+  getSingleBook,
   updateBookDataToDB,
   deleteBookFromDB,
 };

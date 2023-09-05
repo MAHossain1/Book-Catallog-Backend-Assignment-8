@@ -1,0 +1,7 @@
+Tue Sep 05 2023 18:15:27 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.create()` invocation:
+
+
+Foreign key constraint failed on the field: `books_categoryId_fkey (index)`
+Tue Sep 05 2023 18:21:2 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
+Tue Sep 05 2023 18:21:40 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ You are not authorized
