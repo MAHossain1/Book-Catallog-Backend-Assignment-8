@@ -6,8 +6,30 @@ const userFromDB = async (): Promise<Partial<User>[]> => {
   return result;
 };
 
-const getUserById = async (id: string) => {
+const getUserById = async (id: string): Promise<Partial<User | null>> => {
   const result = await prisma.user.findFirst({
+    where: {
+      id,
+    },
+  });
+  return result;
+};
+
+const updateUserDataToDB = async (
+  id: string,
+  payload: Partial<User>
+): Promise<Partial<User | null>> => {
+  const result = await prisma.user.update({
+    where: {
+      id,
+    },
+    data: payload,
+  });
+  return result;
+};
+
+const deleteUserFromDB = async (id: string): Promise<Partial<User | null>> => {
+  const result = await prisma.user.delete({
     where: {
       id,
     },
@@ -18,4 +40,6 @@ const getUserById = async (id: string) => {
 export const UserService = {
   userFromDB,
   getUserById,
+  updateUserDataToDB,
+  deleteUserFromDB,
 };
