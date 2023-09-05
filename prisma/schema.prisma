@@ -25,3 +25,12 @@ enum UserRole {
   admin
   customer
 }
+
+model Category {
+  id        String   @id @default(uuid())
+  title     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("categories")
+}
