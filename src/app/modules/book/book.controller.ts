@@ -35,6 +35,17 @@ const getSingleBook = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getBooksByCategoryId = catchAsync(async (req: Request, res: Response) => {
+  const { categoryId } = req.params;
+  const result = await BookService.getBooksByCategoryId(categoryId);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Books are contained same category Fetched successfully',
+    data: result,
+  });
+});
+
 const updateBookDataToDB = catchAsync(async (req: Request, res: Response) => {
   const { id } = req.params;
   const result = await BookService.updateBookDataToDB(id, req.body);
@@ -63,4 +74,5 @@ export const BookController = {
   getSingleBook,
   updateBookDataToDB,
   deleteBookFromDB,
+  getBooksByCategoryId,
 };

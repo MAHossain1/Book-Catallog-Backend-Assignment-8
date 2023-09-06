@@ -19,6 +19,14 @@ const getSingleBook = async (id: string): Promise<Partial<Book | null>> => {
   });
   return result;
 };
+const getBooksByCategoryId = async (categoryId: string): Promise<Book[]> => {
+  const result = await prisma.book.findMany({
+    where: {
+      categoryId,
+    },
+  });
+  return result;
+};
 
 const updateBookDataToDB = async (
   id: string,
@@ -46,6 +54,7 @@ export const BookService = {
   createBook,
   getBooksFromDB,
   getSingleBook,
+  getBooksByCategoryId,
   updateBookDataToDB,
   deleteBookFromDB,
 };
