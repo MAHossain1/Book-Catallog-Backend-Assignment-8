@@ -1,4 +1,4 @@
-import { OrderedBooks } from '@prisma/client';
+import { Order, OrderedBooks } from '@prisma/client';
 import httpStatus from 'http-status';
 import ApiError from '../../../errors/ApiError';
 import prisma from '../../../shared/prisma';
@@ -48,6 +48,29 @@ const createNewOrder = async (
   return result;
 };
 
+const getAllOrders = async (): Promise<Partial<Order>[]> => {
+  const result = await prisma.order.findMany({
+    include: {
+      orderedBooks: true,
+    },
+  });
+  return result;
+};
+
+const getUserAllOrders = async (userId: string): Promise<Partial<Order>[]> => {
+  const result = await prisma.order.findMany({
+    where: {
+      userId,
+    },
+    include: {
+      orderedBooks: true,
+    },
+  });
+  return result;
+};
+
 export const OrderService = {
   createNewOrder,
+  getAllOrders,
+  getUserAllOrders,
 };
