@@ -20,6 +20,7 @@ model User {
   address          String
   profileImg       String
   reviewAndRatings ReviewAndRating[]
+  orders           Order[]
 }
 
 enum UserRole {
@@ -49,6 +50,7 @@ model Book {
   createdAt        DateTime          @default(now())
   updatedAt        DateTime          @updatedAt
   reviewAndRatings ReviewAndRating[]
+  OrderedBooks     OrderedBooks[]
 
   @@map("books")
 }
@@ -63,4 +65,33 @@ model ReviewAndRating {
   book   Book   @relation(fields: [bookId], references: [id])
 
   @@map("review_and_rating")
+}
+
+model Order {
+  id           String         @id @default(uuid())
+  userId       String
+  user         User           @relation(fields: [userId], references: [id])
+  orderedBooks OrderedBooks[]
+  status       Status         @default(pending)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+
+  @@map("orders")
+}
+
+model OrderedBooks {
+  id       String @id @default(uuid())
+  orderId  String
+  order    Order  @relation(fields: [orderId], references: [id])
+  bookId   String
+  book     Book   @relation(fields: [bookId], references: [id])
+  quantity Int
+
+  @@map("ordered-books")
+}
+
+enum Status {
+  pending
+  shipped
+  delivered
 }

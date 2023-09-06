@@ -25,6 +25,10 @@ const getSingleReview = async (
     where: {
       id,
     },
+    include: {
+      user: true,
+      book: true,
+    },
   });
   return result;
 };
@@ -37,6 +41,10 @@ const updateReviewDataToDB = async (
     where: {
       id,
     },
+    include: {
+      user: true,
+      book: true,
+    },
     data: payload,
   });
   return result;
@@ -48,6 +56,10 @@ const deleteReviewFromDB = async (
   const result = await prisma.reviewAndRating.delete({
     where: {
       id,
+    },
+    include: {
+      user: true,
+      book: true,
     },
   });
   return result;
