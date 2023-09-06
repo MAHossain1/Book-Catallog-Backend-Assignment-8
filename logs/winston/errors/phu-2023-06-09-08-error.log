@@ -1,0 +1,21 @@
+Wed Sep 06 2023 8:29:12 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.order.create()` invocation:
+
+{
+  data: {
+    userId: "8f56b430-a422-4ba6-9d36-9ceafbb1c31b",
+    orderedBooks: [
+      {
+        bookId: "713ab4cc-88b2-479b-83d9-1b1e03d21423",
+        quantity: 4
+      },
+      {
+        bookId: "a894e722-9925-47f2-a7e0-14ae902feb53",
+        quantity: 5
+      }
+    ]
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  }
+}
+
+Argument `orderedBooks`: Invalid value provided. Expected OrderedBooksUncheckedCreateNestedManyWithoutOrderInput, provided (Object, Object).
