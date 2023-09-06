@@ -4,6 +4,7 @@ import ApiError from '../../../errors/ApiError';
 import { jwtHelpers } from '../../../helpers/jwtHelpers';
 import prisma from '../../../shared/prisma';
 import { HashedPassword } from '../../../utlis/hashedPassword';
+import { UserService } from '../user/user.service';
 
 const createUser = async (payload: User) => {
   const isUserExist = await prisma.user.findFirst({
@@ -56,7 +57,14 @@ const userSignIn = async (payload: Partial<User>) => {
 
   return { user: isUserExists, token };
 };
+
+const getUserProfile = async (id: string): Promise<Partial<User | null>> => {
+  const result = await UserService.getUserById(id);
+  return result;
+};
+
 export const AuthService = {
   createUser,
   userSignIn,
+  getUserProfile,
 };
