@@ -1,5 +1,6 @@
-import { Order, OrderedBooks } from '@prisma/client';
+import { Order, OrderedBooks, User } from '@prisma/client';
 import httpStatus from 'http-status';
+import { ENUM_USER_ROLE } from '../../../enums/user';
 import ApiError from '../../../errors/ApiError';
 import prisma from '../../../shared/prisma';
 
@@ -69,8 +70,38 @@ const getUserAllOrders = async (userId: string): Promise<Partial<Order>[]> => {
   return result;
 };
 
+const getSingleOrder = async (
+  id: string,
+  user: Partial<User>
+): Promise<Order | null> => {
+  let result: Order | null = null;
+
+  if (user.role === ENUM_USER_ROLE.CUSTOMER) {
+    result = await prisma.order.findUnique({
+      where: {
+        id,
+        userId: user.id,
+      },
+      include: {
+        orderedBooks: true,
+      },
+    });
+  } else {
+    result = await prisma.order.findUnique({
+      where: {
+        id,
+      },
+      include: {
+        orderedBooks: true,
+      },
+    });
+  }
+  return result;
+};
+
 export const OrderService = {
   createNewOrder,
   getAllOrders,
   getUserAllOrders,
+  getSingleOrder,
 };

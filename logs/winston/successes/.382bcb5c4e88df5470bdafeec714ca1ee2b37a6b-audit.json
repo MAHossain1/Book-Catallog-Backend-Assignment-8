@@ -69,6 +69,11 @@
             "date": 1693976428572,
             "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\successes\\phu-2023-06-09-11-success.log",
             "hash": "3aea87fa9cdd3d4ea6afbd278d613d3a3e790e2003f584c0ee45bb7b3bd28662"
+        },
+        {
+            "date": 1693995656271,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\successes\\phu-2023-06-09-16-success.log",
+            "hash": "4f1ffebdb1fe8ddd808575feaced7e2511eec295b38ebcef1382a131705d9f28"
         }
     ],
     "hashType": "sha256"
