@@ -79,6 +79,26 @@
             "date": 1693999236915,
             "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\successes\\phu-2023-06-09-17-success.log",
             "hash": "b48408ce3048e02df213c49a9042b28c36606a71686fb52045fd5947e07e30e6"
+        },
+        {
+            "date": 1694001749988,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\successes\\phu-2023-06-09-18-success.log",
+            "hash": "b6759cb246e7d310626a3b12cd4a0bb3707fc8711f1fcf077e08b33f3f427fba"
+        },
+        {
+            "date": 1694050744680,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\successes\\phu-2023-07-09-07-success.log",
+            "hash": "ceeec6c45c23486d505c9a02e6a08d822fe12b8d1af2ae34a439fa25e276031d"
+        },
+        {
+            "date": 1694053269397,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\successes\\phu-2023-07-09-08-success.log",
+            "hash": "60a6b9c236066cf2c2093973196bdd7c331275b15d3e103400cdaeef397d7610"
+        },
+        {
+            "date": 1694055694481,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\successes\\phu-2023-07-09-09-success.log",
+            "hash": "9b90d2a8cbc106066b39161ef1e781fdbb22ab148e99f16025fa884a9876a46d"
         }
     ],
     "hashType": "sha256"

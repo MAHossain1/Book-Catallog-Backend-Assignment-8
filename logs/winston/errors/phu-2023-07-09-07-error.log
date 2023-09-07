@@ -1,0 +1,102 @@
+Thu Sep 07 2023 7:46:54 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            page: {
+              equals: "1"
+            }
+          },
+          {
+            limit: {
+              equals: "1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `page`. Did you mean `price`? Available options are listed in green.
+Thu Sep 07 2023 7:46:58 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            page: {
+              equals: "1"
+            }
+          },
+          {
+            limit: {
+              equals: "1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `page`. Did you mean `price`? Available options are listed in green.
+Thu Sep 07 2023 7:56:9 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            limit: {
+              equals: "1"
+            }
+          },
+          {
+            page: {
+              equals: "1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `limit`. Available options are listed in green.

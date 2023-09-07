@@ -1,0 +1,87 @@
+Thu Sep 07 2023 9:2:17 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            maxPrice: {
+              equals: "450"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 5,
+  orderBy: {
+    price: "asc"
+  }
+}
+
+Unknown argument `maxPrice`. Available options are listed in green.
+Thu Sep 07 2023 9:2:42 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            maxPrice: {
+              equals: "450"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 5,
+  orderBy: {
+    price: "asc"
+  }
+}
+
+Unknown argument `maxPrice`. Available options are listed in green.
+Thu Sep 07 2023 9:2:43 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            maxPrice: {
+              equals: "450"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 5,
+  orderBy: {
+    price: "asc"
+  }
+}
+
+Unknown argument `maxPrice`. Available options are listed in green.

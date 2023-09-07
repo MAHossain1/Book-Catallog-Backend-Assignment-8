@@ -1,3 +1,5 @@
+import { ICategory } from '../category/category.interface';
+
 export type IBook = {
   id?: string;
   title: string;
@@ -6,7 +8,7 @@ export type IBook = {
   price: number;
   publicationDate: Date;
   categoryId: string;
-  //   categories?: ICategory;
+  categories?: ICategory;
   createdAt?: Date;
   updatedAt?: Date;
 };

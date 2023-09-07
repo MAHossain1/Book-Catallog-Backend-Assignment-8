@@ -79,6 +79,26 @@
             "date": 1693999236921,
             "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\errors\\phu-2023-06-09-17-error.log",
             "hash": "0ef3e9d64e0fe6638b6767a89544c75481d0a9490e4a2eaeeee59b49bc2d3c13"
+        },
+        {
+            "date": 1694001749992,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\errors\\phu-2023-06-09-18-error.log",
+            "hash": "37ebf579110972ff65cbd32ff6c64a50c74554aed032362555322a00307483b7"
+        },
+        {
+            "date": 1694050744684,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\errors\\phu-2023-07-09-07-error.log",
+            "hash": "ac649c48f6cb2d493dc26b9e73be4cfa2ead47c42e735cf52d6c28272df811ee"
+        },
+        {
+            "date": 1694053269401,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\errors\\phu-2023-07-09-08-error.log",
+            "hash": "dbeb3e2e1b3f3963677c7283e646b6ff60674aa830f66c199e1cde6d754049b8"
+        },
+        {
+            "date": 1694055694485,
+            "name": "C:\\apollo\\final-project\\Book-Catallog-Backend-Assignment-8\\logs\\winston\\errors\\phu-2023-07-09-09-error.log",
+            "hash": "8639567cd6b4524fc25f53cce1d155dddfb0143e69119e6c9304710110111756"
         }
     ],
     "hashType": "sha256"

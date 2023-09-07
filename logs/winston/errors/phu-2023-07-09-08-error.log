@@ -1,0 +1,262 @@
+Thu Sep 07 2023 8:21:14 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            limit: {
+              equals: "1"
+            }
+          },
+          {
+            page: {
+              equals: "1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `limit`. Available options are listed in green.
+Thu Sep 07 2023 8:23:55 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            limit: {
+              equals: "1"
+            }
+          },
+          {
+            page: {
+              equals: "1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `limit`. Available options are listed in green.
+Thu Sep 07 2023 8:40:42 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            limit: {
+              equals: "1"
+            }
+          },
+          {
+            page: {
+              equals: "1"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `limit`. Available options are listed in green.
+Thu Sep 07 2023 8:41:20 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            limit: {
+              equals: "3"
+            }
+          },
+          {
+            page: {
+              equals: "2"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `limit`. Available options are listed in green.
+Thu Sep 07 2023 8:45:29 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            limit: {
+              equals: "3"
+            }
+          },
+          {
+            page: {
+              equals: "2"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `limit`. Available options are listed in green.
+Thu Sep 07 2023 8:45:30 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            limit: {
+              equals: "3"
+            }
+          },
+          {
+            page: {
+              equals: "2"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `limit`. Available options are listed in green.
+Thu Sep 07 2023 8:50:37 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            category: {
+              equals: "romance"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `equals`. Available options are listed in green.
+Thu Sep 07 2023 8:50:39 } [PH] error: 🐱‍🏍 globalErrorHandler ~~ 
+Invalid `prisma.book.findMany()` invocation:
+
+{
+  include: {
+    category: true,
+    reviewAndRatings: true
+  },
+  where: {
+    AND: [
+      {
+        AND: [
+          {
+            category: {
+              equals: "romance"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  skip: 0,
+  take: 10,
+  orderBy: {
+    createdAt: "desc"
+  }
+}
+
+Unknown argument `equals`. Available options are listed in green.

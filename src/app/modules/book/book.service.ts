@@ -1,5 +1,6 @@
 import { Book, Prisma } from '@prisma/client';
 import { paginationHelpers } from '../../../helpers/paginationHelper';
+import { IGenericResponse } from '../../../interfaces/common';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 import prisma from '../../../shared/prisma';
 import { bookSearchableFields } from './book.constant';
@@ -16,14 +17,13 @@ const createBook = async (payload: Book): Promise<Book> => {
 const getBooksFromDB = async (
   filters: IBookFilters,
   paginationOptions: IPaginationOptions
-) => {
-  const { limit, page, skip } =
+): Promise<IGenericResponse<Book[]>> => {
+  const { page, limit, skip } =
     paginationHelpers.calculatePagination(paginationOptions);
 
   const { search, ...filterData } = filters;
 
   const andConditions = [];
-
   if (search) {
     andConditions.push({
       OR: bookSearchableFields.map(field => ({
@@ -34,6 +34,16 @@ const getBooksFromDB = async (
       })),
     });
   }
+
+  // if (Object.keys(filterData).length > 0) {
+  //   andConditions.push({
+  //     AND: Object.keys(filterData).map(key => ({
+  //       [key]: {
+  //         equals: (filterData as any)[key],
+  //       },
+  //     })),
+  //   });
+  // }
 
   if (Object.keys(filterData).length > 0) {
     andConditions.push({
@@ -83,9 +93,7 @@ const getBooksFromDB = async (
           },
   });
 
-  const total = await prisma.book.count({
-    where: whereConditions,
-  });
+  const total = await prisma.book.count();
 
   return {
     meta: {
