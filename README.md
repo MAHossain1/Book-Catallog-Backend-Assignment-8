@@ -1,69 +1,61 @@
-# University Management Core Service
-This guide will walk you through the process of setting up the University Management Core Service Starter project. By following these steps, you will clone the project, install dependencies, and configure Prisma for database management. Let's get started!
+### Live Link: https://book-catalog-prisma-postgres-orpin.vercel.app
 
+### Application Routes:
 
-## Installation Steps
-### Follow these steps to clone and set up starter project:
+#### User
 
-1. `Clone the project:` Open your terminal or command prompt and run the following command to clone the project repository:
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/auth/signup (POST)
 
-```bash
-git clone https://github.com/Programming-Hero-Next-Level-Development/university-management-core-service-starter.git university-management-core-service
-```
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/users (GET) Only Allowed For Admin
 
-2. `Navigate into the project directory:` Use the cd command to navigate into the project directory:
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/users/9065f695-4cd8-445a-a393-5271dc4aa4f7 (Single GET) Only Allowed For Admin
 
-```bash
-cd university-management-core-service
-```
+- ahttps://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/users/9065f695-4cd8-445a-a393-5271dc4aa4f7 (PATCH) Only Allowed For Admin
 
-3. `Install project dependencies:` Next, install the project dependencies by running the following command:
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/users/72d26c4a-09f2-4644-852c-d804bc7cb673 (DELETE) Only Allowed For Admin
 
-```bash
-yarn install
-```
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/auth/profile (GET) Only Allowed For Login user
 
-4. Configure Prisma and the database connection:
+### Category
 
-- Add Prisma as a development dependency by running the following command:
-```bash
-yarn add prisma --save-dev
-```
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/categories/create-category (POST) Only Allowed For Admin
 
-- Set up your Prisma project by creating the Prisma schema file using the following command:
-```bash
-npx prisma init
-```
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/categories (GET)
 
-- Open the prisma/schema.prisma file and configure your database connection details.
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/categories/a1dec8bd-8e99-4f8c-ac1a-531494777aed (Single GET)
 
-```bash
-datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-}
-```
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/categories/a1dec8bd-8e99-4f8c-ac1a-531494777aed (PATCH) Only Allowed For Admin
 
-- Create a .env file in the project root directory and set the DATABASE_URL environment variable. Replace the placeholders with your database connection details:
-```bash
-DATABASE_URL="postgresql://USER:PASSWORD@HOST:PORT/DATABASE?schema=SCHEMA"
-```
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/categories/a1dec8bd-8e99-4f8c-ac1a-531494777aed (DELETE) Only Allowed For Admin
 
-5. Creating the database schema
-6. Migrate the database schema: Use the following command to create and apply the initial database schema:
+### Books
 
-```bash
-npx prisma migrate dev --name init
-```
-This command creates a new migration file based on your schema changes and applies it to your database.
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/books/create-book (POST) Only Allowed For Admin
 
-6. `Install Prisma Client:` Install the Prisma Client library by running the following command:
-```bash
-yarn add @prisma/client
-```
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/books (GET)
 
-This command installs the Prisma Client, which provides an interface to interact with your database.
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/books/0b831bf7-5fd0-4c31-bfa5-3aeaf430b2fd/category (GET)
 
-That's it! You have successfully set up the University Management Core Service Starter project. You can now start exploring and working with the codebase. Refer to the project documentation or README for further instructions on how to run and use the core service.
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/books/09d0c346-40ea-4d6b-91fa-88d373b759d4 (GET)
 
-Happy coding!
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/books/09d0c346-40ea-4d6b-91fa-88d373b759d4 (PATCH)
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/books/09d0c346-40ea-4d6b-91fa-88d373b759d4 (DELETE) Only Allowed For Admin
+
+### Reviews
+
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/reviews/create-review (POST) Only Allowed For Customer
+
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/reviews (GET) Only Allowed For Admin
+
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/reviews/f2f227e1-8a46-4611-b1f5-d8cd2dca554d (GET) Only Allowed For Admin
+
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/reviews/f2f227e1-8a46-4611-b1f5-d8cd2dca554d (PATCH) Only Allowed For Admin
+
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/reviews/f2f227e1-8a46-4611-b1f5-d8cd2dca554d (DELETE) Only Allowed For Admin
+
+### Orders
+
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/orders/create-order (POST)
+
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/orders (GET) Only Allowed For Admin (Get All Orders) -https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/orders (GET) Only Allowed For Customer (Get Customer Orders)
+- https://book-catalog-prisma-postgres-orpin.vercel.app/api/v1/orders/5565b88a-9fbe-42ca-8e10-1624d368bf86 (GET) Allowed For Admin and customer (Get Single Order)

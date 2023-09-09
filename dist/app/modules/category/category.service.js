@@ -19,13 +19,16 @@ const createCategory = (payload) => __awaiter(void 0, void 0, void 0, function* 
     return result;
 });
 const getCategoriesFromDB = () => __awaiter(void 0, void 0, void 0, function* () {
-    const result = yield prisma_1.default.category.findMany();
+    const result = yield prisma_1.default.category.findMany({ include: { books: true } });
     return result;
 });
 const getSingleCategory = (id) => __awaiter(void 0, void 0, void 0, function* () {
     const result = yield prisma_1.default.category.findFirst({
         where: {
             id,
+        },
+        include: {
+            books: true,
         },
     });
     return result;
@@ -35,6 +38,9 @@ const updateCategoryDataToDB = (id, payload) => __awaiter(void 0, void 0, void 0
         where: {
             id,
         },
+        include: {
+            books: true,
+        },
         data: payload,
     });
     return result;
@@ -43,6 +49,9 @@ const deleteCategoryFromDB = (id) => __awaiter(void 0, void 0, void 0, function*
     const result = yield prisma_1.default.category.delete({
         where: {
             id,
+        },
+        include: {
+            books: true,
         },
     });
     return result;

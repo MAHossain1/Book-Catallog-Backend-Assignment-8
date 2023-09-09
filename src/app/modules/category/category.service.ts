@@ -7,7 +7,7 @@ const createCategory = async (payload: Category): Promise<Category> => {
 };
 
 const getCategoriesFromDB = async (): Promise<Partial<Category>[]> => {
-  const result = await prisma.category.findMany();
+  const result = await prisma.category.findMany({ include: { books: true } });
   return result;
 };
 
@@ -17,6 +17,9 @@ const getSingleCategory = async (
   const result = await prisma.category.findFirst({
     where: {
       id,
+    },
+    include: {
+      books: true,
     },
   });
   return result;
@@ -30,6 +33,9 @@ const updateCategoryDataToDB = async (
     where: {
       id,
     },
+    include: {
+      books: true,
+    },
     data: payload,
   });
   return result;
@@ -41,6 +47,9 @@ const deleteCategoryFromDB = async (
   const result = await prisma.category.delete({
     where: {
       id,
+    },
+    include: {
+      books: true,
     },
   });
   return result;

@@ -7,11 +7,7 @@ const router = express.Router();
 
 router.get('/', CategoryController.getCategoriesFromDB);
 
-router.get(
-  '/:id',
-  auth(ENUM_USER_ROLE.ADMIN),
-  CategoryController.getSingleCategory
-);
+router.get('/:id', CategoryController.getSingleCategory);
 
 router.post(
   '/create-category',
